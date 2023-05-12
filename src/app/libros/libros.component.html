@@ -1,0 +1,12 @@
+<h1>Mis Libros Favoritos</h1>
+<!-- f. contiene toda la información del formulario al hacer submit -->
+<form (ngSubmit)="guardarLibro(f)" #f="ngForm">
+  <input type="text" name="nombreLibro" ngModel required />
+  <button type="submit">Agregar Libro</button>
+</form>
+<!-- (libroClicked) recibe el evento del click y ejecuta la función eliminarLibro -->
+<app-libro
+  (libroClicked)="eliminarLibro(lib)"
+  *ngFor="let lib of libros"
+  [tituloLibro]="lib"
+></app-libro>

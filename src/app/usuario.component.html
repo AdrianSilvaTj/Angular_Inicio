@@ -1,0 +1,9 @@
+<h1>Hola y bienvenido a nuestro primer componente Angular</h1>
+<!-- *ngIf="visible": ejecutar un If -->
+<!-- [(ngModel)]="usuarioNombre": Indica que lo que contenga el input pasara a la variable usuarioNombre-->
+<input *ngIf="visible" type="text" [(ngModel)]="usuarioNombre">
+<!-- (click)="onAgregarUsuario()": la función que se ejecutara en el evento click -->
+<button *ngIf="visible" (click)="onAgregarUsuario()">Agregar</button>
+<h2>{{usuarioNombre}} </h2>
+<!-- para ejecutar un ciclo For. usuarios es la lista -->
+<div *ngFor="let usr of usuarios">{{usr}}</div>
